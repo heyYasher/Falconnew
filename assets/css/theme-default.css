@@ -151,14 +151,14 @@ ul {
 
 input:focus,
 button:focus {
-    border-color: #FF5E15;
-    outline-color: #FF5E15;
-    border: 1px solid #FF5E15;
+    border-color: var( --primary-color);
+    outline-color: var( --primary-color);
+    border: 1px solid var( --primary-color);
 }
 
 textarea:focus {
-    border-color: #FF5E15;
-    outline-color: #FF5E15;
+    border-color: var( --primary-color);
+    outline-color: var( --primary-color);
 }
 
 hr {

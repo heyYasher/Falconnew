@@ -42,6 +42,10 @@ Tags:   chemical, company, construction, engineering, factory, gas, industrial, 
 32. indastre Loader Css
 =======================*/
 
+:root{
+    --primary-color: #1c398e;
+    --primary-color2: #0276E1;
+}
 
 
 /*================================
@@ -60,7 +64,7 @@ Tags:   chemical, company, construction, engineering, factory, gas, industrial, 
     top: 0;
     height: 100%;
     width: 17%;
-    background: #ff5e14;
+    background: #EBF5FF;
     z-index: -1;
     transition: .5s;
 }
@@ -112,11 +116,11 @@ Tags:   chemical, company, construction, engineering, factory, gas, industrial, 
 }
 
 .indastre_menu>ul>li>a:hover {
-    color: #FF5E15;
+    color: var( --primary-color);
 }
 
 .indastre_menu>ul>li>a:hover i {
-    color: #FF5E15;
+    color: var( --primary-color);
 }
 
 nav.indastre_menu span {
@@ -146,7 +150,7 @@ nav.indastre_menu span {
     width: 56px;
     height: 56px;
     border-radius: 28px;
-    background-color: #ff5e14;
+    background-color: var( --primary-color);
     line-height: 56px;
     text-align: center;
     color: #fff;
@@ -202,7 +206,7 @@ nav.indastre_menu span {
 }
 
 .header-btn a:hover {
-    background: #ff5e14;
+    background: var( --primary-color);
 }
 
 .header-btn a i {
@@ -299,7 +303,7 @@ nav.indastre_menu span {
 }
 
 ul.sub-menu li a span {
-    background: #ff5e14;
+    background: var( --primary-color);
     padding: 4px 9px;
     color: #fff;
     opacity: 1;
@@ -351,8 +355,8 @@ ul.sub-menu li:hover a span{
 
 .indastre_nav_manu.sticky a.dtbtn {
     color: #fff;
-    background: #F16722;
-    border: 2px solid #F16722;
+    background: var( --primary-color2);
+    border: 2px solid var( --primary-color2);
 }
 
 .indastre_nav_manu.sticky a.dtbtn:hover {
@@ -370,11 +374,11 @@ ul.sub-menu li:hover a span{
     color: #fff;
 }
 .sticky .header-btn a {
-    background: #F16722;
+    background: var( --primary-color2);
 }
 .sticky .header-btn a:hover {
     background: #fff;
-    color: #F16722;
+    color: var( --primary-color2);
 }
 
 /* Header Top Menu CSS */ 
@@ -391,7 +395,7 @@ ul.sub-menu li:hover a span{
     top: 0;
     width: 325px;
     height: 100%;
-    background-color: #ff5e14;
+    background-color: var( --primary-color);
     transform: skew(34deg);
 }
 
@@ -406,7 +410,7 @@ ul.sub-menu li:hover a span{
 .header-address-info p i {
     display: inline-block;
     padding-right: 5px;
-    color: #FF5D13;
+    color: var( --primary-color2);
     font-size: 12px;
 }
 
@@ -439,7 +443,7 @@ span.header-top-upper {
     font-size: 15px;
 }
 .address span i {
-    color: #ff5e14;
+    color: var( --primary-color2);
     font-size: 15px;
     margin-right: 10px;
 }
@@ -470,7 +474,7 @@ span.header-top-upper {
 }
 
 .header-top-right-social ul>li>a:hover {
-    color: #ff5e14;
+    color: var( --primary-color2);
 }
 
 a.top-social-icon-left:after {
@@ -519,7 +523,7 @@ a.top-social-icon-left:after {
     top: 3px;
     width: 10px;
     height: 10px;
-    background-color: #ff5e14;
+    background-color: var( --primary-color);
 }
 
 .slider-content h1 {
@@ -541,7 +545,7 @@ a.top-social-icon-left:after {
     bottom: -19px;
     width: 68px;
     height: 5px;
-    background-color: #ff5e14;
+    background-color: var( --primary-color);
 }
 
 
@@ -561,10 +565,10 @@ a.top-social-icon-left:after {
     font-weight: 500;
     font-family: "Yantramanav";
     color: #fff;
-    background: #FF5E15;
+    background: var( --primary-color);
 }
 .slider-button a:hover {
-    color: #FF5E15;
+    color: var( --primary-color);
 
 }
 .slider-button a:after {
@@ -658,7 +662,7 @@ a.top-social-icon-left:after {
 }
 
 .testimonial_list .owl-dot.active {
-    background: #ff5e14;
+    background: var( --primary-color);
 }
 
 /* text owl carousel  */
@@ -695,10 +699,10 @@ a.top-social-icon-left:after {
     color: #fff;
 }
 .hero .owl-prev:hover{
-    background: #ff5e14;
+    background: var( --primary-color);
 }
 .hero .owl-next:hover {
-    background: #ff5e14;
+    background: var( --primary-color);
 }
 /**
 ======================================================
@@ -727,7 +731,7 @@ a.top-social-icon-left:after {
 
 .section-title h4 {
     font-size: 18px;
-    color: #ff5e14;
+    color: var( --primary-color);
     font-weight: 500;
     font-family: "Yantramanav";
     margin-bottom: 0px;
@@ -744,7 +748,7 @@ a.top-social-icon-left:after {
     left: 0;
     width: 35px;
     height: 2px;
-    background-color: #ff5e14;
+    background-color: var( --primary-color);
     z-index: -1;
 }
 .section-title h1 {
@@ -816,14 +820,14 @@ p.section-description.style-left {
     color: #ffffff;
     font-weight: 500;
     font-family: "Yantramanav";
-    background: #FF5E15;
+    background: var( --primary-color);
     padding: 15px 38px;
     position: relative;
     z-index: 1;
     transition: .5s;
 }
 .indastre-btn a:hover {
-    color: #FF5E15;
+    color: var( --primary-color);
 }
 
 .indastre-btn a:after {
@@ -895,7 +899,7 @@ p.section-description.style-left {
 .about-icon {
     height: 70px;
     width: 70px;
-    background: #FF5D13;
+    background: var( --primary-color2);
     line-height: 70px;
     text-align: center;
     margin-right: 25px;
@@ -949,7 +953,7 @@ h3.about-title {
     padding: 15px 36px;
 }
 .about-btn.style-three a:after {
-    background: #ff5e14;
+    background: var( --primary-color);
 }
 /* about shape */
 .about-shape.style-two {
@@ -1012,7 +1016,7 @@ h3.about-title {
     transition: .5s;
 }
 .service-single-item:hover:after, .service-single-item:hover:before {
-    background: #ff5e14;
+    background: var( --primary-color);
 }
 .service-single-item .service-thumb img {
     width: 100%;
@@ -1065,12 +1069,12 @@ h3.about-title {
     margin-left: -8px;
     font-size: 15px;
     font-weight: 600;
-    color: #ff5e14;
+    color: var( --primary-color);
 }
 
 /* all hover */
 .service-single-item:hover .service-button a {
-    background: #ff5e14;
+    background: var( --primary-color);
     letter-spacing: 0;
     padding: 3px 25px 3px 25px;
 
@@ -1139,12 +1143,12 @@ h3.about-title {
 }
 
 .service-list2 .owl-prev:hover {
-    background: #FF5E15;
+    background: var( --primary-color);
     color: #fff;
 }
 
 .service-list2 .owl-next:hover {
-    background: #FF5E15;
+    background: var( --primary-color);
     color: #fff;
 }
 
@@ -1297,7 +1301,7 @@ h3.choose-title {
     display: inline-block;
     width: 40px;
     height: 40px;
-    background-color: #ff5e14;
+    background-color: var( --primary-color);
     font-size: 20px;
     color: #fff;
     line-height: 40px;
@@ -1322,7 +1326,7 @@ h3.choose-title {
     top: 11px;
     width: 25px;
     height: 2px;
-    background-color: #ff5e14;
+    background-color: var( --primary-color);
 }
 .portfolio-title h3 {
     margin-top: 5px;
@@ -1381,7 +1385,7 @@ h3.choose-title {
 }
 
 .portfolio .owl-dot.active {
-    background: #FF5E16;
+    background: var( --primary-color2);
 }
 /* text owl carousel  */
 .portfolio .owl-nav {
@@ -1415,12 +1419,12 @@ h3.choose-title {
 }
 
 .portfolio .owl-prev:hover {
-    background: #FF5E15;
+    background: var( --primary-color);
     color: #fff;
 }
 
 .portfolio .owl-next:hover {
-    background: #FF5E15;
+    background: var( --primary-color);
     color: #fff;
 }
 
@@ -1486,7 +1490,7 @@ h3.choose-title {
     font-weight: 500;
     width: 100%;
     height: 56px;
-    background-color: #ff5e14;
+    background-color: var( --primary-color);
 }
 .form-box button i {
     font-size: 13px;
@@ -1530,7 +1534,7 @@ h3.choose-title {
     content: "";
     height: 10px;
     width: 50%;
-    background: #ff5e14;
+    background: var( --primary-color);
     top: 0;
     left: -6px;
     z-index: 1;
@@ -1555,7 +1559,7 @@ h3.choose-title {
     width: 76px;
     height: 76px;
     border-radius: 38px;
-    background-color: #ff5e14;
+    background-color: var( --primary-color);
     text-align: center;
     line-height: 76px;
     margin-right: 20px;
@@ -1581,7 +1585,7 @@ h3.choose-title {
     font-size: 18px;
     position: relative;
     top: 0;
-    color: #ff5e14;
+    color: var( --primary-color);
 }
 .pricing-single-items.style_two .pricing-item-text span {
     display: inline-block;
@@ -1616,7 +1620,7 @@ h3.choose-title {
     color: #ffff;
 }
 .pricing-single-items.style_two .indastre-btn a:after {
-    background: #ff5e14;
+    background: var( --primary-color);
 }
 
 /* Pricing singe items secund  */
@@ -1639,7 +1643,7 @@ h3.choose-title {
 .pricing-single-items.style_two.second .indastre-btn.style1 a {
     color: #fff;
     background: transparent;
-    border: 1px solid #ff5e14;
+    border: 1px solid var( --primary-color);
 }
 
 /* info communication */
@@ -1723,7 +1727,7 @@ h3.choose-title {
     transition: .5s;
 }
 .testimonial-item.style_two:hover .testi-author-thumbs img {
-    border: 5px solid #ff5e14;
+    border: 5px solid var( --primary-color);
 }
 .testimonial-item.style_two .testi_quote {
     position: absolute;
@@ -1741,7 +1745,7 @@ h3.choose-title {
     text-align: center;
 }
 .testimonial-item.style_two:hover .testi_quote {
-    background: #ff5e14;
+    background: var( --primary-color);
 }
 .testi_quote img {
     filter: brightness(1) invert(0);
@@ -1829,7 +1833,7 @@ h3.choose-title {
 }
 
 .testimonial_list .owl-dot.active {
-    background: #ff5e14;
+    background: var( --primary-color);
 }
 
 /* text owl carousel  */
@@ -2073,7 +2077,7 @@ h3.choose-title {
 
 .feature-single-inner {
     padding: 26px 40px 30px;
-    border-bottom: 4px solid #ff5e14;
+    border-bottom: 4px solid var( --primary-color);
     transition: .5s;
     background: #fff;
     position: relative;
@@ -2091,10 +2095,10 @@ h3.choose-title {
     content: "";
     left: -3px;
     top: -3px;
-    border-top: 3px solid #ff5e14;
-    border-bottom: 10px solid #ff5e14;
-    border-left: 3px solid #ff5e14;
-    border-right: 10px solid #ff5e14;
+    border-top: 3px solid var( --primary-color);
+    border-bottom: 10px solid var( --primary-color);
+    border-left: 3px solid var( --primary-color);
+    border-right: 10px solid var( --primary-color);
     height: 106%;
     width: 103%;
     z-index: -1;
@@ -2132,7 +2136,7 @@ h3.choose-title {
 h3.feature-number {
     width: 50px;
     height: 50px;
-    background-color: #ff5e14;
+    background-color: var( --primary-color);
     line-height: 50px;
     font-size: 20px;
     color: #ffffff;
@@ -2234,7 +2238,7 @@ h3.feature-number {
     color: #ffffff;
     font-weight: 500;
     font-family: "Yantramanav";
-    background: #FF5E15;
+    background: var( --primary-color);
     padding: 15px 33px;
     position: relative;
     z-index: 1;
@@ -2289,7 +2293,7 @@ h3.feature-number {
     background: #fff;
     margin-bottom: 30px;
     padding: 30px 30px 30px;
-    border-bottom: 3px solid #FF5E15;
+    border-bottom: 3px solid var( --primary-color);
     transition: .5s;
     text-align: left;
     overflow: hidden;
@@ -2358,7 +2362,7 @@ h3.service-title:before {
     top: 45px;
     width: 40px;
     height: 2px;
-    background: #ff5e14;
+    background: var( --primary-color);
     z-index: -1;
     transition: .5s;
 }
@@ -2392,10 +2396,10 @@ p.service-desc {
 .service-btn a {
     display: inline-block;
     font-size: 16px;
-    color: #ff5e14;
+    color: var( --primary-color);
     font-weight: 500;
     font-family: "Yantramanav";
-    border-bottom: 1px solid #FF5D13;
+    border-bottom: 1px solid var( --primary-color2);
     margin: 0;
 }
 
@@ -2415,7 +2419,7 @@ p.service-desc {
 /* all hover */
 
 .indastre-service-single-item:hover .service-icon {
-    background: #FF5E15;
+    background: var( --primary-color);
 }
 
 .indastre-service-single-item:hover .service-icon img {
@@ -2497,12 +2501,12 @@ p.service-desc {
 }
 
 .service-list .owl-prev:hover {
-    background: #FF5E15;
+    background: var( --primary-color);
     color: #fff;
 }
 
 .service-list .owl-next:hover {
-    background: #FF5E15;
+    background: var( --primary-color);
     color: #fff;
 }
 
@@ -2550,11 +2554,11 @@ p.service-desc {
     display: inline-block;
     width: 120px;
     height: 120px;
-    background-color: #ff5e14;
+    background-color: var( --primary-color);
     line-height: 120px;
     text-align: center;
     font-size: 16px;
-    color: #FF5E14;
+    color: var( --primary-color);
 }
 
 .choose-video-icon a i {
@@ -2627,7 +2631,7 @@ p.service-desc {
 }
 
 span.fill {
-    background: #FF5E15!important;
+    background: var( --primary-color)!important;
 }
 
 .barfiller .fill {
@@ -2672,7 +2676,7 @@ span.fill {
     content: "";
     height: 100%;
     width: 0%;
-    background: #FF5E15;
+    background: var( --primary-color);
     left: 0;
     top: 0;
     z-index: -1;
@@ -2719,10 +2723,10 @@ span.fill {
     content: "";
     left: 0;
     top: 0;
-    border-bottom: 15px solid #FF5E15;
-    border-left: 15px solid #FF5E15;
-    border-top: 15px solid #FF5E15;
-    border-right: 15px solid #FF5E15;
+    border-bottom: 15px solid var( --primary-color);
+    border-left: 15px solid var( --primary-color);
+    border-top: 15px solid var( --primary-color);
+    border-right: 15px solid var( --primary-color);
     height: 100%;
     width: 100%;
     transition: .5s;
@@ -2818,7 +2822,7 @@ span.fill {
     width: 82%;
     padding: 25px 0 29px;
     text-align: left;
-    border-left: 3px solid #FF5E15;
+    border-left: 3px solid var( --primary-color);
     padding-left: 35px;
     opacity: 0;
     left: 26px;
@@ -2840,7 +2844,7 @@ span.fill {
 .case-title span a {
     display: inline-block;
     font-size: 18px;
-    color: #ff5e14;
+    color: var( --primary-color);
     font-weight: 500;
     font-family: "Yantramanav";
 }
@@ -2863,7 +2867,7 @@ span.fill {
     display: inline-block;
     width: 50px;
     height: 50px;
-    background-color: #ff5e14;
+    background-color: var( --primary-color);
     line-height: 50px;
 }
 
@@ -2949,12 +2953,12 @@ span.fill {
 }
 
 .case-study .owl-prev:hover {
-    background: #FF5E15;
+    background: var( --primary-color);
     color: #fff;
 }
 
 .case-study .owl-next:hover {
-    background: #FF5E15;
+    background: var( --primary-color);
     color: #fff;
 }
 
@@ -3088,7 +3092,7 @@ span.fill {
     margin-top: -60px;
     padding: 17px 0 90px;
     background: #171717;
-    border-bottom: 3px solid #FF5E15;
+    border-bottom: 3px solid var( --primary-color);
 }
 
 .sengle-team-box:hover .team-title h3 a {
@@ -3096,7 +3100,7 @@ span.fill {
 }
 
 .sengle-team-box:hover .team-title span {
-    color: #FF5E15;
+    color: var( --primary-color);
 }
 
 
@@ -3119,7 +3123,7 @@ span.fill {
     top: 0;
     height: 100%;
     width: 48%;
-    background: #FF5E15;
+    background: var( --primary-color);
     z-index: -1;
 }
 
@@ -3158,7 +3162,7 @@ span.fill {
 
 .testi-star i {
     font-size: 16px;
-    color: #ff5e14;
+    color: var( --primary-color);
     margin-right: 6px;
 }
 
@@ -3261,7 +3265,7 @@ span.testi-title {
 }
 
 .testi_list .owl-dot.active {
-    background: #FF5E15;
+    background: var( --primary-color);
 }
 
 
@@ -3373,7 +3377,7 @@ span.testi-title {
 }
 
 .blog-title h3 a:hover {
-    color: #FF5D13;
+    color: var( --primary-color2);
 }
 
 .blog-btn {
@@ -3407,18 +3411,18 @@ span.testi-title {
 
 /* all hover */
 .single-blog-box:hover .blog-contents {
-    border-bottom: 4px solid #FF5D13;
+    border-bottom: 4px solid var( --primary-color2);
     background-color: #fff;
     filter: drop-shadow(0px 10px 20px rgba(137,137,137,0.15));
 }
 
 .single-blog-box:hover .blog-btn a {
-    color: #FF5D13;
+    color: var( --primary-color2);
 }
 
 .single-blog-box:hover .blog-btn a i {
     color: #fff;
-    background: #FF5D13;
+    background: var( --primary-color2);
 
 }
 
@@ -3430,7 +3434,7 @@ span.testi-title {
 <--  indastre Subscribe Area Css -->
 ======================================================***/
 .newsletter-area {
-    background: #FF5E15;
+    background: var( --primary-color);
     padding: 24px 0 23px;
 }
 
@@ -3539,7 +3543,7 @@ p.footer-desc {
     top: 34px;
     width: 30px;
     height: 2px;
-    background-color: #ff5e14;
+    background-color: var( --primary-color);
 }
 
 .footer-didget-icon {
@@ -3548,7 +3552,7 @@ p.footer-desc {
 }
 
 .footer-didget-icon span i {
-    color: #FF5E15;
+    color: var( --primary-color);
 }
 
 .footer-widget-contact p {
@@ -3578,7 +3582,7 @@ p.footer-desc {
 
 .footer-widget-social-icon ul li a:hover{
     color:#fff;
-    background: #FF5E15;
+    background: var( --primary-color);
 }
 
 .footer-widget-content.style-left {
@@ -3603,7 +3607,7 @@ p.footer-desc {
     top: 36px;
     width: 30px;
     height: 2px;
-    background-color: #ff5e14;
+    background-color: var( --primary-color);
 }
 
 .footer-widget-menu ul li a {
@@ -3770,7 +3774,7 @@ ul.footer-menu li a:hover {
     background: rgba(255,255,255,0.10196078431372549);
 }
 .footer-area.style_two .footer-widget-social-icon ul li a:hover{
-    background: #ff5e14;
+    background: var( --primary-color);
     color: #fff;
 }
 .footer-area.style_two .footer-widget-menu ul li a i {
@@ -3782,7 +3786,7 @@ ul.footer-menu li a:hover {
     color: #ffffffdb;
 }
 .footer-area.style_two .footer-widget-menu ul li a:hover {
-    color: #ff5e14 !important;
+    color: var( --primary-color) !important;
 }
 
 .footer-area.style_two p.degister {
@@ -3799,7 +3803,7 @@ ul.footer-menu li a:hover {
 button.sunscribe-btn {
     width: 167px;
     height: 56px;
-    background-color: #ff5e14;
+    background-color: var( --primary-color);
     border: none;
     outline: 0;
     font-size: 17px;
@@ -3811,7 +3815,7 @@ button.sunscribe-btn {
 }
 button.sunscribe-btn:hover {
     background: #fff;
-    color: #ff5e14;
+    color: var( --primary-color);
 }
 button.sunscribe-btn i {
     margin-left: 7px;
@@ -3868,11 +3872,11 @@ button.sunscribe-btn i {
 }
 
 .breadcumb-content ul li a:hover {
-    color: #FF5E14;
+    color: var( --primary-color);
 }
 
 .breadcumb-content ul li a:hover i {
-    color: #FF5E14;
+    color: var( --primary-color);
 }
 
 .breadcumb-content ul li a:before {
@@ -4071,13 +4075,13 @@ button.sunscribe-btn i {
     position: relative;
     top: -24px;
     line-height: 68px;
-    color: #ff5e14;
+    color: var( --primary-color);
 }
 
 .pricing-item-text span {
     display: inline-block;
     font-size: 70px;
-    color: #ff5e14;
+    color: var( --primary-color);
     font-weight: 700;
     font-family: "Yantramanav";
 }
@@ -4131,7 +4135,7 @@ button.sunscribe-btn i {
 
 .pricing-rcomnded span {
     font-size: 13px;
-    color: #ff5e14;
+    color: var( --primary-color);
     font-weight: 400;
     font-family: "Archivo";
     text-align: center;
@@ -4196,7 +4200,7 @@ p.pb_30 {
     background: #fff;
     padding: 33px 30px 15px;
     margin-bottom: 30px;
-    border-left: 3px solid #FF5D13;
+    border-left: 3px solid var( --primary-color2);
     filter: drop-shadow(0px 5px 30px rgba(117,117,117,0.1));
 }
 
@@ -4207,7 +4211,7 @@ p.pb_30 {
     top: 0;
     height: 100%;
     width: 0%;
-    background: #FF5D13;
+    background: var( --primary-color2);
     z-index: -1;
     transition: .5s;
 }
@@ -4329,7 +4333,7 @@ ul.service-details-list li {
 
 ul.service-details-list li i {
     font-size: 20px;
-    color: #FF5E14;
+    color: var( --primary-color);
     position: relative;
     top: 2px;
     margin-right: 8px;
@@ -4366,7 +4370,7 @@ ul.service-details-list li i {
     left: 0;
     bottom: -23px;
     height: 2px;
-    background: #FF5E14;
+    background: var( --primary-color);
     width: 15px;
 }
 
@@ -4394,7 +4398,7 @@ ul.service-details-list li i {
     content: "";
     height: 100%;
     width: 0%;
-    background: #FF5E15;
+    background: var( --primary-color);
     left: 0;
     top: 0;
     z-index: -1;
@@ -4422,7 +4426,7 @@ ul.service-details-list li i {
     float: right;
     font-size: 16px;
     margin-top: 0px;
-    color: #FF5E15;
+    color: var( --primary-color);
     transition: .5s;
     font-weight: 600;
 }
@@ -4470,7 +4474,7 @@ ul.service-details-list li i {
     float: right;
     font-size: 20px;
     margin-top: 2px;
-    color: #FF5E15;
+    color: var( --primary-color);
 }
 
 .pdf-button a img {
@@ -4559,7 +4563,7 @@ ul.service-details-list li i {
 .portfolio_nav ul li:hover,
 .portfolio_nav ul li.current_menu_item {
     color: #fff;
-    background: #FF5E14;
+    background: var( --primary-color);
     
 }
 
@@ -4590,7 +4594,7 @@ ul.service-details-list li i {
     width: 90%;
     padding: 19px 0 24px;
     text-align: left;
-    border-left: 3px solid #FF5E15;
+    border-left: 3px solid var( --primary-color);
     padding-left: 30px;
     left: 20px;
     transition: .5s;
@@ -4608,7 +4612,7 @@ ul.service-details-list li i {
 .case-title.style2 span a {
     display: inline-block;
     font-size: 18px;
-    color: #ff5e14;
+    color: var( --primary-color);
     font-weight: 400;
     font-family: "Yantramanav";
 }
@@ -4629,7 +4633,7 @@ ul.service-details-list li i {
 }
 
 .indastre-btn.style2 a:after {
-    background: #FF5E14;
+    background: var( --primary-color);
 }
 
 /* all hover */
@@ -4691,7 +4695,7 @@ p.style1 {
 }
 
 .porject-list ul li i {
-    color: #FF5E14;
+    color: var( --primary-color);
     font-size: 20px;
     margin-right: 12px;
 }
@@ -4715,7 +4719,7 @@ p.style1 {
     color: #ffffff;
     font-weight: 700;
     font-family: "Yantramanav";
-    background: #FF5E14;
+    background: var( --primary-color);
     padding: 23px 40px 23px;
 }
 
@@ -4748,7 +4752,7 @@ p.style1 {
 }
 
 .case-info-icon span i {
-    color: #FF5E14;
+    color: var( --primary-color);
 }
 
 .case-info-address {
@@ -4796,7 +4800,7 @@ h3.name-title {
     left: 0;
     bottom: -23px;
     height: 2px;
-    background: #FF5E14;
+    background: var( --primary-color);
     width: 15px;
 }
 
@@ -4823,7 +4827,7 @@ p.share-text {
 }
 
 .csd-social-icon ul li a:hover {
-   background: #FF5E14;
+   background: var( --primary-color);
    color: #fff;
 }
 
@@ -4882,7 +4886,7 @@ p.share-text {
     background-color: #ffffff;
     line-height: 50px;
     text-align: center;
-    color: #FF5E14;
+    color: var( --primary-color);
     font-size: 16px;
 }
 
@@ -4905,7 +4909,7 @@ h3.pagination-title {
 
 .pagination-content span {
     font-size: 17px;
-    color: #ff5e14;
+    color: var( --primary-color);
     font-weight: 400;
     font-family: "Archivo";
 }
@@ -4997,12 +5001,12 @@ a.active:after {
 }
 
 ul.accordion.style1 li a.active span:before {
-    background: #FF5E14;
+    background: var( --primary-color);
 }
 
 
 .faq-area a.active {
-    background: #FF5E14 !important;
+    background: var( --primary-color) !important;
     color: #fff !important;
 }
 
@@ -5012,7 +5016,7 @@ ul.accordion.style1 li a.active span:before {
 
 
 .faq-area ul.accordion.style1 li a span:before {
-    background: #FF5E14;
+    background: var( --primary-color);
 }
 
 .faq-area .accordion.style1  a:after {
@@ -5024,7 +5028,7 @@ ul.accordion.style1 li a.active span:before {
 }
 
 .faq-area a.active:after {
-    background: #FF5E14 !important;
+    background: var( --primary-color) !important;
 }
 
 .faq-area .accordion.style1  li p {
@@ -5056,7 +5060,7 @@ ul.accordion.style1 li a.active span:before {
     line-height: 100px;
     display: inline-block;
     font-size: 30px;
-    color: #FF5E14;
+    color: var( --primary-color);
     margin-bottom: 18px;
     width: 100px;
     height: 100px;
@@ -5086,7 +5090,7 @@ h3.call-do-title {
 }
 
 .single-call-do-box:hover .single-call-do-icon i {
-    background: #FF5E14;
+    background: var( --primary-color);
     color: #fff;
 }
 
@@ -5145,7 +5149,7 @@ h3.call-do-title {
     color: #ffffff;
     font-weight: 500;
     font-family: "Yantramanav";
-    background: #FF5E15;
+    background: var( --primary-color);
     border-radius: 0;
     padding: 16px 38px;
     position: relative;
@@ -5217,7 +5221,7 @@ input.src-input-box::placeholder {
     transform: translateY(-50%);
     font-size: 15px;
     border: none;
-    background: #FF5E15;
+    background: var( --primary-color);
     padding: 17px 25px;
     color: #fff;
 }
@@ -5282,7 +5286,7 @@ input.src-input-box::placeholder {
     top: 43px !important;
     width: 15px;
     height: 2px;
-    background-color: #ff5e14;
+    background-color: var( --primary-color);
     animation-duration: 3s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
@@ -5328,12 +5332,12 @@ input.src-input-box::placeholder {
 }
 
 .catagory-item ul li:hover a {
-    color: #FF5E15;
+    color: var( --primary-color);
 }
 
 
 .catagory-item ul li a i {
-    color: #FF5E15;
+    color: var( --primary-color);
     font-size: 15px;
     margin-right: 14px;
 }
@@ -5366,7 +5370,7 @@ input.src-input-box::placeholder {
 }
 
 .rpost-title h4:hover {
-    color: #FF5E15;
+    color: var( --primary-color);
 }
 
 /*tag menu*/
@@ -5390,7 +5394,7 @@ input.src-input-box::placeholder {
 
 .tag-item a:hover {
     color: #fff;
-    background: #FF5E15;
+    background: var( --primary-color);
 }
 
 /*pagination*/
@@ -5418,7 +5422,7 @@ input.src-input-box::placeholder {
 }
 
 .pagination a:hover {
-    background: #FF5E15;
+    background: var( --primary-color);
     color: #fff;
 
 }
@@ -5469,7 +5473,7 @@ input.src-input-box::placeholder {
 }
 
 .blog-meta span a:hover {
-    color: #FF5E15;
+    color: var( --primary-color);
 }
 
 .blog-content-text.text-left h2 {
@@ -5505,7 +5509,7 @@ p.qouik2 {
 
 h3.blog-details-title {
     font-size: 22px;
-    color: #ff5e14;
+    color: var( --primary-color);
     font-weight: 700;
     font-family: "Yantramanav";
     text-align: center;
@@ -5609,7 +5613,7 @@ ul.blog-details-list img {
 
 .single-blog-social-icon ul li:hover i {
     color: #fff;
-    background: #ff5e14;
+    background: var( --primary-color);
 }
 
 
@@ -5675,7 +5679,7 @@ ul.blog-details-list img {
     border-radius: 2px;
     display: inline-block;
     font-size: 16px;
-    color: #ff5e14;
+    color: var( --primary-color);
     font-weight: 500;
     font-family: "Yantramanav";
 }
@@ -5733,15 +5737,15 @@ input.comment-box::placeholder {
 }
 
 .comment-box:focus, #comment-msg-box:focus {
-    border-color: #FF5E15;
+    border-color: var( --primary-color);
     outline: 0;
     box-shadow: 0 0 6px rgb(204, 48, 0, 0.6);
 }
 
 /*form button*/
 .comment-form .submit-comment {
-    background: #FF5E15;
-    border: 1px solid #FF5E15;
+    background: var( --primary-color);
+    border: 1px solid var( --primary-color);
     padding: 14px 39px;
     margin-left: 15px;
     transition: .5s;
@@ -5754,7 +5758,7 @@ input.comment-box::placeholder {
 
 .comment-form .submit-comment:hover {
     background: #fff;
-    color: #FF5E15;
+    color: var( --primary-color);
 }
 
 
@@ -6143,7 +6147,7 @@ input.comment-box::placeholder {
     text-align: center;
     line-height: 46px;
     font-size: 18px;
-    color: #FF5E14;
+    color: var( --primary-color2);
     left: 0;
     top: 0;
     height: 46px;
@@ -6186,7 +6190,7 @@ input.comment-box::placeholder {
     fill: none;
   }
   .prgoress_indicator svg.progress-circle path {
-    stroke: #FF5E14;
+    stroke: var( --primary-color2);
     stroke-width: 4;
     box-sizing: border-box;
     transition: all 200ms linear !important;
@@ -6237,7 +6241,7 @@ input.comment-box::placeholder {
     bottom: 6px;
     border-radius: 50%;
     border: 3px solid transparent;
-    border-left-color: #FF5E14;
+    border-left-color: var( --primary-color);
     -webkit-animation: spin 2s linear infinite;
     -moz-animation: spin 2s linear infinite;
     -o-animation: spin 2s linear infinite;
