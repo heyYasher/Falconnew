@@ -2078,6 +2078,10 @@ h3.choose-title {
     background: #171717;
 }
 
+.feature-signle-item{
+    height: 100%;
+}
+
 .feature-single-inner {
     padding: 26px 40px 30px;
     border-bottom: 4px solid var( --primary-color);
@@ -2086,6 +2090,7 @@ h3.choose-title {
     position: relative;
     z-index: 1;
     margin-bottom: 30px;
+    height: 100%;
 }
 
 .feature-single-inner:hover {
@@ -3439,6 +3444,7 @@ span.testi-title {
 .newsletter-area {
     background: var( --primary-color);
     padding: 24px 0 23px;
+    height: 140px;
 }
 
 .newsletter-title h1 {
