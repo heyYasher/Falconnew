@@ -5067,6 +5067,7 @@ ul.accordion.style1 li a.active span:before {
     padding: 40px 35px 25px;
     background: #F5F6F8;
     margin-bottom: 30px;
+    height: 100%;
 }
 
 .single-call-do-icon i {
