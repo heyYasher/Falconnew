@@ -6419,3 +6419,7 @@ input.comment-box::placeholder {
     padding: 8px;
     border-radius: 2px;
 }
+
+ .logo img {
+    width: 232px;
+}
