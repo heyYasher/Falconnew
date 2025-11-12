@@ -1705,9 +1705,10 @@ h3.choose-title {
     position: relative;
     z-index: 1;
     min-height: 430px;
-    /* background: white; */
     width: 100%;
 }
+
+
 .testimonial-item.style_two .testi_inner:before {
     content: "";
     position: absolute;
