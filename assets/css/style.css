@@ -1704,6 +1704,9 @@ h3.choose-title {
     text-align: center;
     position: relative;
     z-index: 1;
+    min-height: 430px;
+    /* background: white; */
+    width: 100%;
 }
 .testimonial-item.style_two .testi_inner:before {
     content: "";
@@ -1766,6 +1769,7 @@ h3.choose-title {
     text-align: center;
     margin-top: -62px;
     z-index: -1;
+    height: 386px;
 }
 .testimonial-item.style_two:hover .testimonial-content p {
     color: #171717;
@@ -5117,7 +5121,18 @@ h3.call-do-title {
     padding: 67px 50px 80px;
     border-top: 5px solid #FF5F15;
 }
-
+.form_box{
+    height: 100%;
+    /* background-color: white; */
+}
+.form_box select{
+    height: 60px;
+    background-color: #ffffff;
+    width: 100%;
+    border: 0;
+    outline: 0;
+    padding: 0 20px;
+}
 .form_box input {
     height: 60px;
     background-color: #ffffff;
@@ -5125,7 +5140,6 @@ h3.call-do-title {
     border: 0;
     outline: 0;
     padding: 0 20px;
-    margin-bottom: 20px;
 }
 
 .form_box input::placeholder {

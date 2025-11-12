@@ -40,6 +40,14 @@
 
 	<!-- modernizr js -->
 	<script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function(){
+      emailjs.init("JMA_zM0dXZNhAxPmq"); // replace with your EmailJS public key
+  })();
+</script>
+
 </head>
 
 <body>
@@ -289,40 +297,53 @@
 							<h4>CONTACT US</h4>
 							<h1>Get In Touch Contact Us</h1>
 						</div>
-						<form action="https://formspree.io/f/myyleorq" method="POST" id="dreamit-form">
-							<div class="row">
-								<div class="col-lg-6">
-									<div class="form_box">
-										<input type="text" name="name" placeholder="Name" required>
-									</div>
+						<form id="dreamit-form">
+							<div class="row g-4">
+							  <div class="col-lg-6">
+								<div class="form_box">
+								  <input type="text" name="name" placeholder="Name" id="name" required>
 								</div>
-								<div class="col-lg-6">
-									<div class="form_box">
-										<input type="email" name="email" placeholder="Email Address" required>
-									</div>
+							  </div>
+						  
+							  <div class="col-lg-6">
+								<div class="form_box">
+								  <input type="email" name="email" placeholder="Email Address" id="email" required>
 								</div>
-								<div class="col-lg-6">
-									<div class="form_box">
-										<input type="email" name="email" placeholder="Email Address" required>
-									</div>
+							  </div>
+						  
+							  <div class="col-lg-6">
+								<div class="form_box">
+								  <input type="number" name="number" placeholder="Phone Number" id="number" required>
 								</div>
-								<div class="col-lg-6">
-									<div class="form_box">
-										<input type="text" name="sebject" placeholder="Subject" required>
-									</div>
+							  </div>
+						  
+							  <div class="col-lg-6">
+								<div class="form_box">
+								  <select name="subject" id="subject" required>
+									<option value="">Select Subject</option>
+									<option value="Website Design">Website Design</option>
+									<option value="App Development">App Development</option>
+									<option value="E-Commerce">E-Commerce</option>
+									<option value="UI/UX Design">UI/UX Design</option>
+									<option value="Other">Other</option>
+								  </select>
 								</div>
-
-								<div class="col-lg-12">
-									<div class="form_box">
-										<textarea name="message" placeholder="Your Message" required></textarea>
-
-									</div>
-									<div class="quote_button">
-										<button class="btn" type="submit">Send Message</button>
-									</div>
+							  </div>
+						  
+							  <div class="col-lg-12">
+								<div class="form_box">
+								  <textarea name="message" placeholder="Your Message" id="message" required></textarea>
 								</div>
+								<div class="quote_button">
+								  <button class="btn" type="submit">Send Message</button>
+								</div>
+							  </div>
 							</div>
-						</form>
+						  </form>
+						  
+						  <!-- Optional success/error messages -->
+						  <p id="form-status"></p>
+						  
 						<div id="status"></div>
 					</div>
 				</div>
@@ -528,6 +549,56 @@
 	<!--==================================================-->
 	<!-- Ends Curser Section Here -->
 	<!--==================================================-->
+
+
+
+
+	<script>
+		document.getElementById("dreamit-form").addEventListener("submit", function(e) {
+		  e.preventDefault();
+		
+		  // Validation
+		  const name = document.getElementById("name").value.trim();
+		  const email = document.getElementById("email").value.trim();
+		  const number = document.getElementById("number").value.trim();
+		  const subject = document.getElementById("subject").value.trim();
+		  const message = document.getElementById("message").value.trim();
+		  const status = document.getElementById("form-status");
+		
+		  if (!name || !email || !number || !subject || !message) {
+			status.textContent = "⚠️ Please fill all required fields.";
+			status.style.color = "red";
+			return;
+		  }
+		
+		  // Email format validation
+		  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+		  if (!emailRegex.test(email)) {
+			status.textContent = "⚠️ Please enter a valid email address.";
+			status.style.color = "red";
+			return;
+		  }
+		
+		  // Send Email using EmailJS
+		  emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+			from_name: name,
+			from_email: email,
+			phone_number: number,
+			subject: subject,
+			message: message
+		  })
+		  .then(() => {
+			status.textContent = "✅ Message sent successfully!";
+			status.style.color = "green";
+			document.getElementById("dreamit-form").reset();
+		  }, (error) => {
+			status.textContent = "❌ Failed to send message. Try again later.";
+			status.style.color = "red";
+			console.error(error);
+		  });
+		});
+	</script>
+		
 
 
 	<!-- jquery js -->
