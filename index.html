@@ -234,7 +234,55 @@
 					</div>
 				</div>
 				<div class="col-lg-6">
-					<form action="https://formspree.io/f/myyleorq" method="POST" id="dreamit-form">
+					<form id="dreamit-form" novalidate>
+						<div class="row g-4">
+						  <div class="col-lg-6">
+							<div class="form_box">
+							  <input type="text" name="name" placeholder="Name" id="name" required>
+							</div>
+							<small id="error-name" class="error"></small>
+						  </div>
+					  
+						  <div class="col-lg-6">
+							<div class="form_box">
+							  <input type="email" name="email" placeholder="Email Address" id="email" required>
+							</div>
+							<small id="error-email" class="error"></small>
+						  </div>
+					  
+						  <div class="col-lg-6">
+							<div class="form_box">
+							  <input type="number" name="number" placeholder="Phone Number" id="number" required>
+							</div>
+							<small id="error-number" class="error"></small>
+						  </div>
+					  
+						  <div class="col-lg-6">
+							<div class="form_box">
+							  <input type="text" name="subject" placeholder="Subject" id="subject" required>
+							</div>
+							<small id="error-subject" class="error"></small>
+						  </div>
+					  
+						  <div class="col-lg-12">
+							<div class="form_box">
+							  <textarea name="message" placeholder="Your Message" id="message" style="border: none;height: 140px;" required></textarea>
+							</div>
+							<small id="error-message" class="error"></small>
+					  
+							<div class="quote_button form-box">
+							  <!-- ✅ Added ID -->
+							  <button type="Submit">Submit Message <i
+								class="flaticon flaticon-right-arrow"></i></button>
+							</div>
+						  </div>
+						</div>
+					  
+						<!-- ✅ Added form status text -->
+						<p id="form-status"></p>
+					</form>
+
+					<!-- <form action="https://formspree.io/f/myyleorq" method="POST" id="dreamit-form">
 						<div class="row">
 							<div class="col-lg-6 col-md-6">
 								<div class="form-box">
@@ -286,8 +334,8 @@
 								</div>
 							</div>
 						</div>
-					</form>
-					<div id="status"></div>
+					</form> -->
+					<!-- <div id="status"></div> -->
 				</div>
 
 			</div>
