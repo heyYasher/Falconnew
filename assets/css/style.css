@@ -1704,7 +1704,7 @@ h3.choose-title {
     text-align: center;
     position: relative;
     z-index: 1;
-    min-height: 430px;
+    /* min-height: 430px; */
     width: 100%;
 }
 

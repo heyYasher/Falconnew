@@ -41,12 +41,12 @@
 	<!-- modernizr js -->
 	<script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script type="text/javascript">
   (function(){
       emailjs.init("JMA_zM0dXZNhAxPmq"); // replace with your EmailJS public key
   })();
-</script>
+</script> -->
 
 </head>
 
@@ -297,54 +297,83 @@
 							<h4>CONTACT US</h4>
 							<h1>Get In Touch Contact Us</h1>
 						</div>
-						<form id="dreamit-form">
+						<form id="dreamit-form" novalidate>
 							<div class="row g-4">
 							  <div class="col-lg-6">
 								<div class="form_box">
 								  <input type="text" name="name" placeholder="Name" id="name" required>
 								</div>
+								<small id="error-name" class="error"></small>
 							  </div>
 						  
 							  <div class="col-lg-6">
 								<div class="form_box">
 								  <input type="email" name="email" placeholder="Email Address" id="email" required>
 								</div>
+								<small id="error-email" class="error"></small>
 							  </div>
 						  
 							  <div class="col-lg-6">
 								<div class="form_box">
 								  <input type="number" name="number" placeholder="Phone Number" id="number" required>
 								</div>
+								<small id="error-number" class="error"></small>
 							  </div>
 						  
 							  <div class="col-lg-6">
 								<div class="form_box">
-								  <select name="subject" id="subject" required>
-									<option value="">Select Subject</option>
-									<option value="Website Design">Website Design</option>
-									<option value="App Development">App Development</option>
-									<option value="E-Commerce">E-Commerce</option>
-									<option value="UI/UX Design">UI/UX Design</option>
-									<option value="Other">Other</option>
-								  </select>
+								  <input type="text" name="subject" placeholder="Subject" id="subject" required>
 								</div>
+								<small id="error-subject" class="error"></small>
 							  </div>
 						  
 							  <div class="col-lg-12">
 								<div class="form_box">
 								  <textarea name="message" placeholder="Your Message" id="message" required></textarea>
 								</div>
+								<small id="error-message" class="error"></small>
+						  
 								<div class="quote_button">
-								  <button class="btn" type="submit">Send Message</button>
+								  <!-- ✅ Added ID -->
+								  <button class="btn" type="submit" id="submit-btn">Send Message</button>
 								</div>
 							  </div>
 							</div>
-						  </form>
+						  
+							<!-- ✅ Added form status text -->
+							<p id="form-status"></p>
+						</form>
 						  
 						  <!-- Optional success/error messages -->
 						  <p id="form-status"></p>
 						  
 						<div id="status"></div>
+
+
+
+						<!-- Success Modal -->
+<div id="success-modal" class="modal">
+	<div class="modal-content">
+	  <p>✅ Message sent successfully!</p>
+	</div>
+  </div>
+  
+  <style>
+	.error { color: red; font-size: 13px; margin-bottom: 5px; display: block; }
+	#form-status { margin-top: 10px; font-weight: bold; }
+	#submit-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+	.modal {
+	  display: none;
+	  position: fixed; top: 0; left: 0;
+	  width: 100%; height: 100%;
+	  background: rgba(0,0,0,0.5);
+	  justify-content: center; align-items: center;
+	}
+	.modal-content {
+	  background: white; padding: 20px 40px;
+	  border-radius: 10px; text-align: center;
+	}
+</style>
 					</div>
 				</div>
 			</div>
@@ -553,51 +582,99 @@
 
 
 
-	<script>
-		document.getElementById("dreamit-form").addEventListener("submit", function(e) {
-		  e.preventDefault();
-		
-		  // Validation
-		  const name = document.getElementById("name").value.trim();
-		  const email = document.getElementById("email").value.trim();
-		  const number = document.getElementById("number").value.trim();
-		  const subject = document.getElementById("subject").value.trim();
-		  const message = document.getElementById("message").value.trim();
-		  const status = document.getElementById("form-status");
-		
-		  if (!name || !email || !number || !subject || !message) {
-			status.textContent = "⚠️ Please fill all required fields.";
-			status.style.color = "red";
-			return;
-		  }
-		
-		  // Email format validation
-		  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-		  if (!emailRegex.test(email)) {
-			status.textContent = "⚠️ Please enter a valid email address.";
-			status.style.color = "red";
-			return;
-		  }
-		
-		  // Send Email using EmailJS
-		  emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
-			from_name: name,
-			from_email: email,
-			phone_number: number,
-			subject: subject,
-			message: message
-		  })
-		  .then(() => {
-			status.textContent = "✅ Message sent successfully!";
-			status.style.color = "green";
-			document.getElementById("dreamit-form").reset();
-		  }, (error) => {
-			status.textContent = "❌ Failed to send message. Try again later.";
-			status.style.color = "red";
-			console.error(error);
-		  });
-		});
-	</script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+	(function() {
+	  emailjs.init("JMA_zM0dXZNhAxPmq");
+	})();
+  
+	document.getElementById("dreamit-form").addEventListener("submit", function(e) {
+	  e.preventDefault();
+	  e.stopPropagation();
+  
+	  console.log("Submit clicked - preventing default");
+  
+	  if (localStorage.getItem("formSubmitted")) {
+		alert("⚠️ You have already submitted this form.");
+		return;
+	  }
+  
+	  const name = document.getElementById("name").value.trim();
+	  const email = document.getElementById("email").value.trim();
+	  const number = document.getElementById("number").value.trim();
+	  const subject = document.getElementById("subject").value.trim();
+	  const message = document.getElementById("message").value.trim();
+  
+	  document.querySelectorAll(".error").forEach(el => el.textContent = "");
+	  const status = document.getElementById("form-status");
+	  const submitBtn = document.getElementById("submit-btn");
+	  status.textContent = "";
+  
+	  let valid = true;
+  
+	  if (!name || name.length < 3) {
+		document.getElementById("error-name").textContent = "Please enter a valid name (min 3 chars).";
+		valid = false;
+	  }
+  
+	  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+	  if (!emailRegex.test(email)) {
+		document.getElementById("error-email").textContent = "Enter a valid email address.";
+		valid = false;
+	  }
+  
+	  const numberRegex = /^[0-9]{10}$/;
+	  if (!numberRegex.test(number)) {
+		document.getElementById("error-number").textContent = "Enter a valid 10-digit phone number.";
+		valid = false;
+	  }
+  
+	  if (!subject) {
+		document.getElementById("error-subject").textContent = "Subject cannot be empty.";
+		valid = false;
+	  }
+  
+	  if (message.length < 10) {
+		document.getElementById("error-message").textContent = "Message must be at least 10 characters.";
+		valid = false;
+	  }
+  
+	  if (!valid) {
+		console.log("Validation failed — keeping fields intact");
+		return;
+	  }
+  
+	  console.log("Validation passed — sending...");
+  
+	  submitBtn.disabled = true;
+	  submitBtn.textContent = "Sending...";
+  
+	  emailjs.send("service_9hd4zr6", "template_i62nwms", {
+		from_name: name,
+		from_email: email,
+		phone_number: number,
+		subject: subject,
+		message: message
+	  })
+	  .then(() => {
+		localStorage.setItem("formSubmitted", "true");
+		const modal = document.getElementById("success-modal");
+		modal.style.display = "flex";
+		setTimeout(() => modal.style.display = "none", 3000);
+		submitBtn.textContent = "Send Message";
+		submitBtn.disabled = false;
+	  })
+	  .catch((error) => {
+		status.textContent = "❌ Failed to send message. Try again later.";
+		status.style.color = "red";
+		submitBtn.textContent = "Send Message";
+		submitBtn.disabled = false;
+		console.error("EmailJS error:", error);
+	  });
+	});
+  </script>
+
+	
 		
 
 
