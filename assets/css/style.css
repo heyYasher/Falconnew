@@ -108,11 +108,11 @@ Tags:   chemical, company, construction, engineering, factory, gas, industrial, 
     display: block;
     margin: 36px 23px;
     transition: .5s;
-    font-size: 16px;
+    font-size: 17px;
     color: #171717;
     font-weight: 500;
     font-family: "Yantramanav";
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 
 .indastre_menu>ul>li>a:hover {
@@ -3790,6 +3790,11 @@ ul.footer-menu li a:hover {
 .footer-area.style_two .footer-widget-social-icon ul li a:hover{
     background: var( --primary-color);
     color: #fff;
+}
+.footer-area.style_two .footer-widget-menu.contact ul li{
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
 }
 .footer-area.style_two .footer-widget-menu ul li a i {
     font-size: 14px;
