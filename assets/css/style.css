@@ -545,7 +545,7 @@ a.top-social-icon-left:after {
     content: "";
     left: 0;
     z-index: -1;
-    bottom: -68px;
+    bottom: -3px;
     width: 68px;
     height: 5px;
     background-color: var(--primary-color);
@@ -553,6 +553,7 @@ a.top-social-icon-left:after {
 
 .slider-content p {
     color: white;
+    margin-top: 16px;
 }
 
 /*slider button*/

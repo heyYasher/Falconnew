@@ -1498,8 +1498,7 @@
     }
 
     .about_left {
-        margin-left: -18px;
-        margin-bottom: 30px;
+        margin: 0px 0 30px !important;
     }
 
     .about-shape {
@@ -1691,7 +1690,7 @@
         font-size: 20px;
     }
     .service-single-item {
-        padding: 25px 0 0 25px;
+        padding: 17px 0 0 17px;
     }
     .service-area.style-three:before {
         top: -3px;
@@ -1734,8 +1733,22 @@
     .pricing-single-items.style_two {
         margin-bottom: 30px;
     }
+    .testi-shapes img{
+        width: 100%;
+    }
+    .testi-shapes{
+        top: 2%;
+    }
+    .footer-bottom-menu {
+        display: flex;
+        justify-content: center;
+    }
+    .footer-bottom-content{
+        text-align: center;
+    }
     .testimonial-section {
         margin-top: -193px;
+        padding: 150px 0 135px
     }
     .testimonial-content p {
         font-size: 16px;
@@ -1976,5 +1989,65 @@
 @media screen and (min-width:1200px) {
     .video-icon {
         left: 75%;
+    }
+}
+
+@media (max-width: 479px) {
+    .marquee_area{
+        padding: 40px 0 40px;
+    }
+    .marquee.style2 .marquee-block h3 {
+        font-size: 45px;
+    }
+    .newsletter-area {
+        height: 47px;
+    }
+    .sengle-team-box {
+        padding: 10px 10px 10px;
+    }
+    .service-area ,
+    .row.choose-us_bg,
+    .pricing-area,
+    .about_area.style-two,
+    .feature-area,
+    .team-area,
+    .testimonial-area,
+    .blog-section,
+    .blog-details,
+    .appoinment-section,
+    .about_area.style-three,
+    .service-area.style-three,
+    .why-choose-us-area.style_two,
+    .project_area,
+    .counter-area.style_two,
+    .blog-area{
+        padding: 50px 0 50px;
+    }
+    .breadcumb-area {
+        height: 250px;
+    }
+    .slider-button a {
+        padding: 10px 17px;
+    }
+    .breadcumb-content h1 {
+        font-size: 36px;
+        margin-bottom: 5px;
+    }
+    .mean-container .mean-bar::before {
+        font-size: 23px;
+    }
+    .breadcumb-content ul li a{
+        font-size: 13px;
+    }
+}
+@media (max-width: 400px){
+    .footer-bottom-content-copy p {
+        font-size: 13px;
+    }
+    .footer-bottom-menu ul li a{
+        font-size: 15px;
+    }
+    .breadcumb-content h1 {
+        font-size: 30px;
     }
 }
