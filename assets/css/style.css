@@ -85,7 +85,7 @@ Tags:   chemical, company, construction, engineering, factory, gas, industrial, 
 /* indastre Menu Css*/
 .main_menu {
     text-align: right;
-    padding: 0 0 0 0;
+    padding: 0 0 0 20px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -1774,6 +1774,8 @@ h3.choose-title {
     margin-top: -62px;
     z-index: -1;
     height: 386px;
+    display: flex;
+    flex-direction: column;
 }
 .testimonial-item.style_two:hover .testimonial-content p {
     color: #171717;
@@ -1782,7 +1784,7 @@ h3.choose-title {
     display: none;
 }
 .testimonial-item.style_two .reviews_rating {
-    margin: 25px 0 0;
+    margin: auto 0 0;
 }
 .testimonial-item.style_two .bio {
     top: 0;
@@ -5569,19 +5571,27 @@ p.desc-style1 {
 }
 
 h3.blog-details-list-title {
-    font-size: 24px;
+    font-size: 40px;
     color: #171717;
     font-weight: 700;
     font-family: "Yantramanav";
     margin-bottom: 17px;
 }
 
+.blog-details-thumb{
+   height: 400px;
+}
+.blog-details-thumb video{
+  height: 100%;
+  width: 100%;
+}
+
 ul.blog-details-list li {
-    font-size: 16px;
+    font-size: 17px;
     color: #171717;
     font-weight: 500;
     font-family: "Archivo";
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
 
 ul.blog-details-list img {
